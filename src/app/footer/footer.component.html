@@ -1,0 +1,38 @@
+<footer class="footer">
+    <!-- <figure>
+        <img src="assets/psy-symbol.svg" alt="Símbolo Psicología">
+    </figure> -->
+    <section class="top-section">
+        <ul>
+            <li (mouseover)="showEnvelope = true" (mouseout)="showEnvelope = false">
+                <fa-icon [icon]="faEnvelope"></fa-icon>
+                <a [ngClass]="{'show-icon': showEnvelope}" href="mailto:mail@mail.com">mail@mail.com</a>
+            </li>
+            <li (mouseover)="showPhone = true" (mouseout)="showPhone = false">
+                <fa-icon [icon]="faPhoneAlt"></fa-icon>
+                <a [ngClass]="{'show-icon': showPhone}" href="tel:+">+34 600 000 000</a>
+            </li>
+            <li>
+                <i class="fab fa-twitter"></i>
+                <a href="http://" target="_blank" rel="noopener noreferrer">@twittername</a>
+            </li>
+            <li>
+                <i class="fab fa-linkedin-in"></i>
+                <a href="http://" target="_blank" rel="noopener noreferrer">linkedinname</a>
+            </li>
+        </ul>
+        <div class="separator"></div>
+        <div>
+            <nav>
+                <ul>
+                    <li>Top Section</li>
+                    <li>Middle Section</li>
+                    <li>Bottom Section</li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <section class="bottom-section">
+        <p>Iván Piquero Cordero &#169; {{currentYear}}</p>
+    </section>
+</footer>

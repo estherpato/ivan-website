@@ -1,0 +1,21 @@
+@import '../../styles/variables.scss';
+
+.link {
+    display: inline-block;
+    color: $accent;
+    text-decoration: none;
+}
+
+.link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: $accent;
+    transition: width .3s;
+}
+
+.link:hover::after {
+    width: 100%;
+    //transition: width .3s;
+}

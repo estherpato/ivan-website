@@ -1,0 +1,39 @@
+@import '../../styles/variables.scss';
+
+:host {
+    width: 100%;
+    display: flex;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.top-section {
+    display: flex;
+    flex-direction: column;
+    background-color: $primary;
+
+    li {
+        display: flex;
+    }
+
+    a {
+        color: $accent;
+        text-decoration: none;
+        margin-left: 10px;
+        //transform: translateX(-100%);
+        
+        // &.show-icon {
+        //     color: $accent;
+        //     transform: translateX(0);
+        //     transition: transform 0.5s ease;
+        // }
+    }
+}
+
+fa-icon {
+    color: $accent;
+}

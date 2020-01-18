@@ -4,6 +4,7 @@
     width: 100%;
     display: flex;
     height: 100vh;
+    flex-direction: column;
 }
 
 .header {
@@ -12,6 +13,10 @@
     background-color: $primary;
     display: flex;
     flex-direction: column;
+}
+
+.parallax {
+    display: none;
 }
 
 .nav-bar {
@@ -23,8 +28,8 @@
 }
 
 .button {
-    width: 60px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     position: fixed;
     top: 20px;
     left: 20px;
@@ -37,7 +42,7 @@
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
     cursor: pointer;
-    background-color: $primary;
+    background-color: transparent;
 
     span {
         display: block;
@@ -124,22 +129,12 @@
 
 .button.open span:nth-child(5) {
     left: 5px;
-    top: 29px;
+    top: 18px;
 }
 
 .button.open span:nth-child(6) {
     left: calc(50% - 5px);
-    top: 29px;
-}
-
-.fa-times,
-.fa-bars {
-    color: $accent;
-    font-size: 24px;
-
-    &:hover {
-        color: $accent-hover;
-    }
+    top: 18px;
 }
 
 .title-wrapper {
@@ -159,4 +154,37 @@
 .secondary-title {
     display: none;
     color: $accent;
+}
+
+@media only screen and (min-width: 768px) {
+    .main-title {
+        font-size: 42px;
+    }
+
+    .secondary-title {
+        font-size: 36px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .header {
+        background-color: $primary-opacity;
+    }
+    .parallax {
+        display: inherit;
+        z-index: -1;
+        position: fixed;
+        width: 100%;
+        /* The image used */
+        background-image: url("https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+
+        /* Set a specific height */
+        min-height: 100vh;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
