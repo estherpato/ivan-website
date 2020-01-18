@@ -43,5 +43,8 @@ export class HeaderComponent implements OnInit {
     }, speed)
   }
 
+  toggleMenu(event) {
+    this.menuOpen = !this.menuOpen;
+  }
 
 }
