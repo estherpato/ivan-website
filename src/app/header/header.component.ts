@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   menuOpen = false;
   speed = 100;
+  onHover: boolean = false;
 
   constructor() { }
 
